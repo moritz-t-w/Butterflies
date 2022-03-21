@@ -1,11 +1,11 @@
 let butterflies = [];
 
 function setup() {
-    createCanvas(800, 400);
+    createCanvas(displayWidth, displayHeight);
 }
 
 function mouseDragged() {
-    let r = random(20, 40);
+    let r = random(40, 60);
     let b = new Butterfly(mouseX, mouseY, r);
     butterflies.push(b);
 }
@@ -32,7 +32,7 @@ class Butterfly {
 
     move() {
         this.x = this.x + random(-5, 5);
-        this.y = this.y - random(-3, 7);
+        this.y = this.y - random(7, 13);
     }
 
     show() {
